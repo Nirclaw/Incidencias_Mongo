@@ -1,0 +1,152 @@
+use("gestion_reportes");
+db.createCollection("usuario_reporte", {
+    validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "usuario resportes",
+      required: [
+        "usu_id_reporte",
+        "usu_incidencia",
+        "usu_fecha",
+        "usu_lugar_incidencia",
+      ],
+      properties: {
+        usu_id_reporte: {
+          bsonType: "int",
+          description: "el tipo de dato es incorrecto",
+        },
+        usu_incidencia: {
+          bsonType: "object",
+          required: ["nivel", "categoria"],
+          properties: {
+            nivel: {
+              bsonType: "int",
+              description: "el tipo de dato es incorrecto",
+            },
+            categoria: {
+              bsonType: "string",
+              description: "el tipo de dato es incorrecto",
+            },
+          },
+        },
+        usu_fecha: {
+          bsonType: "string",
+          description: "el tipo de dato es incorrecto",
+        },
+        usu_lugar_incidencia: {
+          bsonType: "int",
+          description: "el tipo de dato es incorrecto",
+        },
+      },
+    },
+  },
+});
+
+use("gestion_reportes");
+db.createCollection("salones", {
+    validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "salones",
+      required: ["salon_id", "salon_nombre", "salon_area", "ordenadores"],
+      properties: {
+        salon_id: {
+          bsonType: "int",
+          description: "el tipo de dat o no es correcto",
+        },
+        salon_nombre: {
+          bsonType: "string",
+          description: "el tipo de dato es incorrecto",
+        },
+        salon_area: {
+          bsonType: "string",
+          description: "el tipo de dato es incorrecto",
+        },
+        ordenadores: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: [
+              "ordenador_id_teclado",
+              "ordenador_id_mouse",
+              "ordenador_id_diadema",
+              "ordenador_id_salon",
+            ],
+            description: "datos requeridos",
+            properties: {
+              ordenador_id: {
+                bsonType: "int",
+                description: "el tipo de dato es incorrecto",
+              },
+              ordenador_id_teclado: {
+                bsonType: "int",
+                description: "el tipo de dato es incorrecto",
+              },
+              ordenador_id_mouse: {
+                bsonType: "int",
+                description: "el tipo de dato es incorrecto",
+              },
+              ordenador_id_diadema: {
+                bsonType: "int",
+                description: "el tipo de dato es incorrecto",
+              },
+              ordenador_id_salon: {
+                bsonType: "int",
+                description: "el tipo de dato es incorrecto",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+});
+
+use("gestion_reportes");
+db.createCollection("trainers", {
+    validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: [
+        "traid_id",
+        "trai_nombre_completo",
+        "trai_email_personal",
+        "trai_email_corporativo",
+        "trai_telefono_movil",
+        "trai_telefono_fijo",
+        "trai_telefono_empresa",
+        "trai_movil_empresarial",
+      ],
+      properties: {
+        traid_id: {
+          bsonType: "int",
+          description: "el tipo de dato es incorrecto",
+        },
+        trai_nombre_completo: {
+          bsonType: "string",
+          description: "el tipo de dato es incorrecto",
+        },
+        trai_email_personal: {
+          bsonType: "string",
+          description: "el tipo de dato es incorrecto",
+        },
+        trai_email_corporativo: {
+          bsonType: "string",
+          description: "el tipo de dato es incorrecto",
+        },
+        trai_telefono_fijo: {
+          bsonType: "int",
+          description: "el tipo de dato es incorrecto",
+        },
+        trai_telefono_empresa: {
+          bsonType: "int",
+          description: "el tipo de dato es incorrecto",
+        },
+        trai_movil_empresarial: {
+          bsonType: "int",
+          description: "el tipo de dato es incorrecto",
+        },
+      },
+    },
+  },
+});
