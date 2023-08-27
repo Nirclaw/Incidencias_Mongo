@@ -1,6 +1,6 @@
 use("gestion_reportes");
 db.createCollection("usuario_reporte", {
-    validator: {
+  validator: {
     $jsonSchema: {
       bsonType: "object",
       title: "usuario resportes",
@@ -20,12 +20,12 @@ db.createCollection("usuario_reporte", {
           required: ["nivel", "categoria"],
           properties: {
             nivel: {
-              bsonType: "int",
-              description: "el tipo de dato es incorrecto",
+              enum: ["bajo", "medio", "alto"],
+              description: "debe escoger un entre bajo medio alto",
             },
             categoria: {
-              bsonType: "string",
-              description: "el tipo de dato es incorrecto",
+              enum: ["software", "hardware"],
+              description: "debe escoger un entre software o hardware",
             },
           },
         },
@@ -34,8 +34,18 @@ db.createCollection("usuario_reporte", {
           description: "el tipo de dato es incorrecto",
         },
         usu_lugar_incidencia: {
-          bsonType: "int",
-          description: "el tipo de dato es incorrecto",
+          bsonType: "object",
+          required: ["id_salon", "id_ordenador"],
+          properties: {
+            id_salon: {
+              bsonType: "int",
+              description: "el tipo de dato es incorrecto",
+            },
+            id_ordenador: {
+              bsonType: "int",
+              description: "el tipo de dato es incorrecto",
+            },
+          },
         },
       },
     },
@@ -44,7 +54,7 @@ db.createCollection("usuario_reporte", {
 
 use("gestion_reportes");
 db.createCollection("salones", {
-    validator: {
+  validator: {
     $jsonSchema: {
       bsonType: "object",
       title: "salones",
@@ -79,19 +89,19 @@ db.createCollection("salones", {
                 description: "el tipo de dato es incorrecto",
               },
               ordenador_id_teclado: {
-                bsonType: "int",
+                bsonType: "number",
                 description: "el tipo de dato es incorrecto",
               },
               ordenador_id_mouse: {
-                bsonType: "int",
+                bsonType: "number",
                 description: "el tipo de dato es incorrecto",
               },
               ordenador_id_diadema: {
-                bsonType: "int",
+                bsonType: "number",
                 description: "el tipo de dato es incorrecto",
               },
               ordenador_id_salon: {
-                bsonType: "int",
+                bsonType: "number",
                 description: "el tipo de dato es incorrecto",
               },
             },
@@ -104,11 +114,11 @@ db.createCollection("salones", {
 
 use("gestion_reportes");
 db.createCollection("trainers", {
-    validator: {
+  validator: {
     $jsonSchema: {
       bsonType: "object",
       required: [
-        "traid_id",
+        "trai_id",
         "trai_nombre_completo",
         "trai_email_personal",
         "trai_email_corporativo",
@@ -118,33 +128,89 @@ db.createCollection("trainers", {
         "trai_movil_empresarial",
       ],
       properties: {
-        traid_id: {
+        trai_id: {
           bsonType: "int",
-          description: "el tipo de dato es incorrecto",
+          description: "ID del entrenador",
         },
         trai_nombre_completo: {
           bsonType: "string",
-          description: "el tipo de dato es incorrecto",
+          description: "Nombre completo del entrenador",
         },
         trai_email_personal: {
           bsonType: "string",
-          description: "el tipo de dato es incorrecto",
+          description: "Correo electrónico personal del entrenador",
         },
         trai_email_corporativo: {
           bsonType: "string",
-          description: "el tipo de dato es incorrecto",
+          description: "Correo electrónico corporativo del entrenador",
+        },
+        trai_telefono_movil: {
+          bsonType: "number",
+          description: "Teléfono móvil del entrenador",
         },
         trai_telefono_fijo: {
-          bsonType: "int",
-          description: "el tipo de dato es incorrecto",
+          bsonType: "number",
+          description: "Teléfono fijo del entrenador",
         },
         trai_telefono_empresa: {
-          bsonType: "int",
-          description: "el tipo de dato es incorrecto",
+          bsonType: "number",
+          description: "Teléfono de la empresa del entrenador",
         },
         trai_movil_empresarial: {
-          bsonType: "int",
+          bsonType: "number",
+          description: "Teléfono móvil empresarial del entrenador",
+        },
+      },
+    },
+  },
+});
+
+use("gestion_reportes");
+db.createCollection("roles", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "roles",
+      required: ["user", "password", "rol", "permisos"],
+      properties: {
+        user: {
+          bsonType: "string",
           description: "el tipo de dato es incorrecto",
+        },
+        password: {
+          bsonType: "string",
+          description: "el tipo de dato es incorrecto",
+        },
+        rol: {
+          enum: ["admin", "user"],
+          description: "debe escoger un rol entre admin,user,root",
+        },
+        permisos: {
+          bsonType: "object",
+          description: "ingrese los persmisos",
+          properties: {
+            "/usuario_reporte": {
+              bsonType: "array",
+              items: {
+                bsonType: "string",
+                description: "ingrese la version a autirizar",
+              },
+            },
+            "/salones": {
+              bsonType: "array",
+              items: {
+                bsonType: "string",
+                description: "ingrese la version a autirizar",
+              },
+            },
+            "/trainers": {
+              bsonType: "array",
+              items: {
+                bsonType: "string",
+                description: "ingrese la version a autirizar",
+              },
+            },
+          },
         },
       },
     },

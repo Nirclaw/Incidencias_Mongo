@@ -1,0 +1,247 @@
+use("gestion_reportes");
+db.trainers.insertMany([
+  {
+    trai_id: 4,
+    trai_nombre_completo: "Ana García",
+    trai_email_personal: "ana@example.com",
+    trai_email_corporativo: "ana@empresa.com",
+    trai_telefono_movil: 11112222333,
+    trai_telefono_fijo: 44445555666,
+    trai_telefono_empresa: 77778888999,
+    trai_movil_empresarial: 1010101010,
+  },
+  {
+    trai_id: 5,
+    trai_nombre_completo: "Pedro Martinez",
+    trai_email_personal: "pedro@example.com",
+    trai_email_corporativo: "pedro@empresa.com",
+    trai_telefono_movil: 22223333444,
+    trai_telefono_fijo: 55556666777,
+    trai_telefono_empresa: 88889999000,
+    trai_movil_empresarial: 2020202020,
+  },
+  {
+    trai_id: 6,
+    trai_nombre_completo: "Laura Herrera",
+    trai_email_personal: "laura@example.com",
+    trai_email_corporativo: "laura@empresa.com",
+    trai_telefono_movil: 33334444555,
+    trai_telefono_fijo: 66665555666,
+    trai_telefono_empresa: 99998888777,
+    trai_movil_empresarial: 3030303030,
+  },
+  {
+    trai_id: 7,
+    trai_nombre_completo: "Carlos Sanchez",
+    trai_email_personal: "carlos@example.com",
+    trai_email_corporativo: "carlos@empresa.com",
+    trai_telefono_movil: 44445555666,
+    trai_telefono_fijo: 77776666777,
+    trai_telefono_empresa: 11112222333,
+    trai_movil_empresarial: 4040404040,
+  },
+  {
+    trai_id: 8,
+    trai_nombre_completo: "Sofia Ramirez",
+    trai_email_personal: "sofia@example.com",
+    trai_email_corporativo: "sofia@empresa.com",
+    trai_telefono_movil: 55556666777,
+    trai_telefono_fijo: 88887777888,
+    trai_telefono_empresa: 22223333444,
+    trai_movil_empresarial: 5050505050,
+  },
+]);
+
+use("gestion_reportes");
+db.salones.insertMany([
+    {
+      salon_id: 4,
+      salon_nombre: "Salón D",
+      salon_area: "Área 2",
+      ordenadores: [
+        {
+          ordenador_id: 107,
+          ordenador_id_teclado: 207,
+          ordenador_id_mouse: 307,
+          ordenador_id_diadema: 407,
+          ordenador_id_salon: 4
+        },
+        {
+          ordenador_id: 108,
+          ordenador_id_teclado: 208,
+          ordenador_id_mouse: 308,
+          ordenador_id_diadema: 408,
+          ordenador_id_salon: 4
+        }
+      ]
+    },
+    {
+      salon_id: 5,
+      salon_nombre: "Salón E",
+      salon_area: "Área 3",
+      ordenadores: [
+        {
+          ordenador_id: 109,
+          ordenador_id_teclado: 209,
+          ordenador_id_mouse: 309,
+          ordenador_id_diadema: 409,
+          ordenador_id_salon: 5
+        },
+        {
+          ordenador_id: 110,
+          ordenador_id_teclado: 210,
+          ordenador_id_mouse: 310,
+          ordenador_id_diadema: 410,
+          ordenador_id_salon: 5
+        }
+      ]
+    },
+    {
+      salon_id: 6,
+      salon_nombre: "Salón F",
+      salon_area: "Área 1",
+      ordenadores: [
+        {
+          ordenador_id: 111,
+          ordenador_id_teclado: 211,
+          ordenador_id_mouse: 311,
+          ordenador_id_diadema: 411,
+          ordenador_id_salon: 6
+        },
+        {
+          ordenador_id: 112,
+          ordenador_id_teclado: 212,
+          ordenador_id_mouse: 312,
+          ordenador_id_diadema: 412,
+          ordenador_id_salon: 6
+        }
+      ]
+    },
+    {
+      salon_id: 7,
+      salon_nombre: "Salón G",
+      salon_area: "Área 3",
+      ordenadores: [
+        {
+          ordenador_id: 113,
+          ordenador_id_teclado: 213,
+          ordenador_id_mouse: 313,
+          ordenador_id_diadema: 413,
+          ordenador_id_salon: 7
+        },
+        {
+          ordenador_id: 114,
+          ordenador_id_teclado: 214,
+          ordenador_id_mouse: 314,
+          ordenador_id_diadema: 414,
+          ordenador_id_salon: 7
+        }
+      ]
+    },
+    {
+      salon_id: 8,
+      salon_nombre: "Salón H",
+      salon_area: "Área 2",
+      ordenadores: [
+        {
+          ordenador_id: 115,
+          ordenador_id_teclado: 215,
+          ordenador_id_mouse: 315,
+          ordenador_id_diadema: 415,
+          ordenador_id_salon: 8
+        },
+        {
+          ordenador_id: 116,
+          ordenador_id_teclado: 216,
+          ordenador_id_mouse: 316,
+          ordenador_id_diadema: 416,
+          ordenador_id_salon: 8
+        }
+      ]
+    }
+  ]);
+use("gestion_reportes");
+  db.usuario_reporte.insertMany([
+    {
+      usu_id_reporte: 1,
+      usu_incidencia: {
+        nivel: "alto",
+        categoria: "hardware"
+      },
+      usu_fecha: "2023-08-27",
+      usu_lugar_incidencia: {
+        id_salon: 5,
+        id_ordenador: 109
+      }
+    },
+    {
+      usu_id_reporte: 2,
+      usu_incidencia: {
+        nivel: "medio",
+        categoria: "software"
+      },
+      usu_fecha: "2023-08-28",
+      usu_lugar_incidencia: {
+        id_salon: 8,
+        id_ordenador: 116
+      }
+    },
+    {
+      usu_id_reporte: 3,
+      usu_incidencia: {
+        nivel: "bajo",
+        categoria: "software"
+      },
+      usu_fecha: "2023-08-28",
+      usu_lugar_incidencia: {
+        id_salon: 1,
+        id_ordenador: 106
+      }
+    },
+    {
+      usu_id_reporte: 4,
+      usu_incidencia: {
+        nivel: "alto",
+        categoria: "hardware"
+      },
+      usu_fecha: "2023-08-29",
+      usu_lugar_incidencia: {
+        id_salon: 3,
+        id_ordenador: 111
+      }
+    },
+    {
+      usu_id_reporte: 5,
+      usu_incidencia: {
+        nivel: "medio",
+        categoria: "software"
+      },
+      usu_fecha: "2023-08-30",
+      usu_lugar_incidencia: {
+        id_salon: 2,
+        id_ordenador: 114
+      }
+    }
+  ]);
+
+use("gestion_reportes");
+db.roles.insertMany([
+  {
+    user: "Nicolas",
+    password: "123456789",
+    rol: "admin",
+    permisos: {
+      "/usuario_reporte": ["1.0.0"],
+      "/salones": ["1.0.0"],
+      "/trainers": ["1.0.0"],
+    },
+  },
+  {
+    user: "Miguel",
+    password: "123456789",
+    rol: "user",
+    permisos: {
+      "/usuario_reporte": ["1.0.0"],
+    },
+  },
+]);
