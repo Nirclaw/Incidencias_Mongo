@@ -9,6 +9,7 @@ db.createCollection("usuario_reporte", {
         "usu_incidencia",
         "usu_fecha",
         "usu_lugar_incidencia",
+        "usu_idTrainer"
       ],
       properties: {
         usu_id_reporte: {
@@ -46,7 +47,10 @@ db.createCollection("usuario_reporte", {
               description: "el tipo de dato es incorrecto",
             },
           },
-        },
+        },usu_idTrainer:{
+          bsonType:"number",
+          description:"El topo de dato es incorrecto"
+        }
       },
     },
   },

@@ -1,0 +1,23 @@
+use("gestion_reportes");
+
+//trae todos los reportes existentes
+db.usuario_reporte.aggregate([
+  {
+    $project: {
+      _id: 0,
+    },
+  },
+]);
+use("gestion_reportes");
+db.roles.findOne({
+  _id: new ObjectId("64eb7d6056dedf29ae3651aa"),
+  [`permisos.${req.baseUrl}`]: `${req.headers["accept-version"]}`,
+});
+
+use("gestion_reportes");
+db.salones.findOne({
+  $and: [
+    { salon_id: 4 },
+    { "ordenadores.ordenador_id": 107 }
+  ]
+});

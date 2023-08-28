@@ -54,175 +54,181 @@ db.trainers.insertMany([
 
 use("gestion_reportes");
 db.salones.insertMany([
-    {
-      salon_id: 4,
-      salon_nombre: "Salón D",
-      salon_area: "Área 2",
-      ordenadores: [
-        {
-          ordenador_id: 107,
-          ordenador_id_teclado: 207,
-          ordenador_id_mouse: 307,
-          ordenador_id_diadema: 407,
-          ordenador_id_salon: 4
-        },
-        {
-          ordenador_id: 108,
-          ordenador_id_teclado: 208,
-          ordenador_id_mouse: 308,
-          ordenador_id_diadema: 408,
-          ordenador_id_salon: 4
-        }
-      ]
-    },
-    {
-      salon_id: 5,
-      salon_nombre: "Salón E",
-      salon_area: "Área 3",
-      ordenadores: [
-        {
-          ordenador_id: 109,
-          ordenador_id_teclado: 209,
-          ordenador_id_mouse: 309,
-          ordenador_id_diadema: 409,
-          ordenador_id_salon: 5
-        },
-        {
-          ordenador_id: 110,
-          ordenador_id_teclado: 210,
-          ordenador_id_mouse: 310,
-          ordenador_id_diadema: 410,
-          ordenador_id_salon: 5
-        }
-      ]
-    },
-    {
-      salon_id: 6,
-      salon_nombre: "Salón F",
-      salon_area: "Área 1",
-      ordenadores: [
-        {
-          ordenador_id: 111,
-          ordenador_id_teclado: 211,
-          ordenador_id_mouse: 311,
-          ordenador_id_diadema: 411,
-          ordenador_id_salon: 6
-        },
-        {
-          ordenador_id: 112,
-          ordenador_id_teclado: 212,
-          ordenador_id_mouse: 312,
-          ordenador_id_diadema: 412,
-          ordenador_id_salon: 6
-        }
-      ]
-    },
-    {
-      salon_id: 7,
-      salon_nombre: "Salón G",
-      salon_area: "Área 3",
-      ordenadores: [
-        {
-          ordenador_id: 113,
-          ordenador_id_teclado: 213,
-          ordenador_id_mouse: 313,
-          ordenador_id_diadema: 413,
-          ordenador_id_salon: 7
-        },
-        {
-          ordenador_id: 114,
-          ordenador_id_teclado: 214,
-          ordenador_id_mouse: 314,
-          ordenador_id_diadema: 414,
-          ordenador_id_salon: 7
-        }
-      ]
-    },
-    {
-      salon_id: 8,
-      salon_nombre: "Salón H",
-      salon_area: "Área 2",
-      ordenadores: [
-        {
-          ordenador_id: 115,
-          ordenador_id_teclado: 215,
-          ordenador_id_mouse: 315,
-          ordenador_id_diadema: 415,
-          ordenador_id_salon: 8
-        },
-        {
-          ordenador_id: 116,
-          ordenador_id_teclado: 216,
-          ordenador_id_mouse: 316,
-          ordenador_id_diadema: 416,
-          ordenador_id_salon: 8
-        }
-      ]
-    }
-  ]);
+  {
+    salon_id: 4,
+    salon_nombre: "Salón D",
+    salon_area: "Área 2",
+    ordenadores: [
+      {
+        ordenador_id: 107,
+        ordenador_id_teclado: 207,
+        ordenador_id_mouse: 307,
+        ordenador_id_diadema: 407,
+        ordenador_id_salon: 4,
+      },
+      {
+        ordenador_id: 108,
+        ordenador_id_teclado: 208,
+        ordenador_id_mouse: 308,
+        ordenador_id_diadema: 408,
+        ordenador_id_salon: 4,
+      },
+    ],
+  },
+  {
+    salon_id: 5,
+    salon_nombre: "Salón E",
+    salon_area: "Área 3",
+    ordenadores: [
+      {
+        ordenador_id: 109,
+        ordenador_id_teclado: 209,
+        ordenador_id_mouse: 309,
+        ordenador_id_diadema: 409,
+        ordenador_id_salon: 5,
+      },
+      {
+        ordenador_id: 110,
+        ordenador_id_teclado: 210,
+        ordenador_id_mouse: 310,
+        ordenador_id_diadema: 410,
+        ordenador_id_salon: 5,
+      },
+    ],
+  },
+  {
+    salon_id: 6,
+    salon_nombre: "Salón F",
+    salon_area: "Área 1",
+    ordenadores: [
+      {
+        ordenador_id: 111,
+        ordenador_id_teclado: 211,
+        ordenador_id_mouse: 311,
+        ordenador_id_diadema: 411,
+        ordenador_id_salon: 6,
+      },
+      {
+        ordenador_id: 112,
+        ordenador_id_teclado: 212,
+        ordenador_id_mouse: 312,
+        ordenador_id_diadema: 412,
+        ordenador_id_salon: 6,
+      },
+    ],
+  },
+  {
+    salon_id: 7,
+    salon_nombre: "Salón G",
+    salon_area: "Área 3",
+    ordenadores: [
+      {
+        ordenador_id: 113,
+        ordenador_id_teclado: 213,
+        ordenador_id_mouse: 313,
+        ordenador_id_diadema: 413,
+        ordenador_id_salon: 7,
+      },
+      {
+        ordenador_id: 114,
+        ordenador_id_teclado: 214,
+        ordenador_id_mouse: 314,
+        ordenador_id_diadema: 414,
+        ordenador_id_salon: 7,
+      },
+    ],
+  },
+  {
+    salon_id: 8,
+    salon_nombre: "Salón H",
+    salon_area: "Área 2",
+    ordenadores: [
+      {
+        ordenador_id: 115,
+        ordenador_id_teclado: 215,
+        ordenador_id_mouse: 315,
+        ordenador_id_diadema: 415,
+        ordenador_id_salon: 8,
+      },
+      {
+        ordenador_id: 116,
+        ordenador_id_teclado: 216,
+        ordenador_id_mouse: 316,
+        ordenador_id_diadema: 416,
+        ordenador_id_salon: 8,
+      },
+    ],
+  },
+]);
 use("gestion_reportes");
-  db.usuario_reporte.insertMany([
-    {
-      usu_id_reporte: 1,
-      usu_incidencia: {
-        nivel: "alto",
-        categoria: "hardware"
-      },
-      usu_fecha: "2023-08-27",
-      usu_lugar_incidencia: {
-        id_salon: 5,
-        id_ordenador: 109
-      }
+db.usuario_reporte.insertMany([
+  {
+    usu_id_reporte: 1,
+    usu_incidencia: {
+      nivel: "alto",
+      categoria: "hardware",
     },
-    {
-      usu_id_reporte: 2,
-      usu_incidencia: {
-        nivel: "medio",
-        categoria: "software"
-      },
-      usu_fecha: "2023-08-28",
-      usu_lugar_incidencia: {
-        id_salon: 8,
-        id_ordenador: 116
-      }
+
+    usu_fecha: "2023-08-27",
+    usu_lugar_incidencia: {
+      id_salon: 5,
+      id_ordenador: 109,
     },
-    {
-      usu_id_reporte: 3,
-      usu_incidencia: {
-        nivel: "bajo",
-        categoria: "software"
-      },
-      usu_fecha: "2023-08-28",
-      usu_lugar_incidencia: {
-        id_salon: 1,
-        id_ordenador: 106
-      }
+    usu_idTrainer: 4,
+  },
+  {
+    usu_id_reporte: 2,
+    usu_incidencia: {
+      nivel: "medio",
+      categoria: "software",
     },
-    {
-      usu_id_reporte: 4,
-      usu_incidencia: {
-        nivel: "alto",
-        categoria: "hardware"
-      },
-      usu_fecha: "2023-08-29",
-      usu_lugar_incidencia: {
-        id_salon: 3,
-        id_ordenador: 111
-      }
+    usu_fecha: "2023-08-28",
+    usu_lugar_incidencia: {
+      id_salon: 8,
+      id_ordenador: 116,
     },
-    {
-      usu_id_reporte: 5,
-      usu_incidencia: {
-        nivel: "medio",
-        categoria: "software"
-      },
-      usu_fecha: "2023-08-30",
-      usu_lugar_incidencia: {
-        id_salon: 2,
-        id_ordenador: 114
-      }
-    }
-  ]);
+    usu_idTrainer: 4,
+  },
+  {
+    usu_id_reporte: 3,
+    usu_incidencia: {
+      nivel: "bajo",
+      categoria: "software",
+    },
+    usu_fecha: "2023-08-28",
+    usu_lugar_incidencia: {
+      id_salon: 1,
+      id_ordenador: 106,
+    },
+    usu_idTrainer: 4,
+  },
+  {
+    usu_id_reporte: 4,
+    usu_incidencia: {
+      nivel: "alto",
+      categoria: "hardware",
+    },
+    usu_fecha: "2023-08-29",
+    usu_lugar_incidencia: {
+      id_salon: 3,
+      id_ordenador: 111,
+    },
+    usu_idTrainer: 4,
+  },
+  {
+    usu_id_reporte: 5,
+    usu_incidencia: {
+      nivel: "medio",
+      categoria: "software",
+    },
+    usu_fecha: "2023-08-30",
+    usu_lugar_incidencia: {
+      id_salon: 2,
+      id_ordenador: 114,
+    },
+    usu_idTrainer: 4,
+  },
+]);
 
 use("gestion_reportes");
 db.roles.insertMany([
