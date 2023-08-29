@@ -20,4 +20,8 @@ db.salones.findOne({
     { salon_id: 4 },
     { "ordenadores.ordenador_id": 107 }
   ]
+})
+use("gestion_reportes");
+db.usuario_reporte.findOne({
+  usu_id_reporte:4
 });

@@ -237,8 +237,8 @@ db.roles.insertMany([
     password: "123456789",
     rol: "admin",
     permisos: {
-      "/usuario_reporte": ["1.0.0"],
-      "/salones": ["1.0.0"],
+      "/usuario_reporte": ["1.0.0","2.0.0"],
+      "/salones": ["1.0.0",],
       "/trainers": ["1.0.0"],
     },
   },
