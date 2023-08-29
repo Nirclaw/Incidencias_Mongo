@@ -1,4 +1,4 @@
-import {  check } from "express-validator";
+import { check } from "express-validator";
 
 export const validatoPost = [
   check("usu_id_reporte")
@@ -30,4 +30,11 @@ export const validatoPost = [
     .notEmpty()
     .isNumeric()
     .withMessage("el id_ordenador es obligatorio"),
+];
+
+export const validarDelete = [
+  check("usu_id_reporte")
+    .notEmpty()
+    .isInt()
+    .withMessage("el dato es incorrecto"),
 ];
